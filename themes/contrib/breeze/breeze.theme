@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+ /**
+  * @file
+  * Contains theme override functions.
+  */
+
+ use Drupal\Component\Utility\Html;
+
+ /**
+  * Implements hook_form_alter.
+  */
+ function breeze_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+   if ($form_id == 'search_block_form') {
+     $form['keys']['#attributes']['placeholder'] = t('Search');
+   }
+   if ($form_id == 'user_login_form') {
+     $form['name']['#attributes']['placeholder'] = $form['name']['#title'];
+     $form['name']['#title_display'] = 'invisible';
+     $form['pass']['#attributes']['placeholder'] = $form['pass']['#title'];
+     $form['pass']['#title_display'] = 'invisible';
+   }
+ }

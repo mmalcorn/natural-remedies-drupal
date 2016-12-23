@@ -1,0 +1,21 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+      css/responsive.css: {}
+      includes/bootstrap/css/bootstrap/bootstrap-theme.css: {}
+      includes/bootstrap/css/bootstrap/bootstrap.css: {}
+
+open-sans:
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Open+Sans': { type: external, minified: true }
+  license:
+    name: SIL Open Font License 1.1
+    url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+
+global-js:
+  js:
+   includes/bootstrap/js/bootstrap/bootstrap.js: {}
+  dependencies:
+    - core/jquery
